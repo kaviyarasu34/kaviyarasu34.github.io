@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion" onclick="myFunction0()">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum 
+</div>
+
+<button class="accordion" onclick="myFunction1()">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum 
+</div>
+
+<button class="accordion" onclick="myFunction2()">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum 
+</div>
+
+<script>
+
+let panel = document.getElementsByClassName("panel");
+
+
+function myFunction0() {
+if (panel[0].style.display === 'block')
+{
+       panel[1].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+else if (panel[1].style.display === 'block')
+{
+       panel[1].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+	else if (panel[2].style.display === 'block')
+{
+       panel[1].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+	      
+	   else {
+	    panel[0].style.display = 'block';
+		
+	   }
+	   return myFunction0();
+}
+function myFunction1() {
+
+if (panel[1].style.display === 'block')
+{
+
+       panel[0].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+else if (panel[0].style.display === 'block')
+{
+       panel[0].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+	else if (panel[2].style.display === 'block')
+{
+       panel[0].style.display = 'none';
+	   panel[2].style.display = 'none';
+	   }
+	      
+	   else {
+	    panel[1].style.display = 'block';
+		
+	   }
+	   return myFunction1();
+}
+function myFunction2() {
+if (panel[2].style.display === 'block')
+{
+       panel[0].style.display = 'none';
+	   panel[1].style.display = 'none';
+	   }
+else if (panel[1].style.display === 'block')
+{
+       panel[0].style.display = 'none';
+	   panel[1].style.display = 'none';
+	   }
+	else if (panel[0].style.display === 'block')
+{
+       panel[0].style.display = 'none';
+	   panel[1].style.display = 'none';
+	   }
+	      
+	   else {
+	    panel[2].style.display = 'block';
+		
+	   }
+	   return myFunction2();
+}
+
+
+
+
+</script>
+
+</body>
+</html>
