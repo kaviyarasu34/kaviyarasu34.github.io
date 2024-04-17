@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fenix&display=swap');
+
+body{
+    font-family: "Inconsolata", monospace;
+    font-weight: bolder;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(55deg, #c6c6f9, white, gray);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+.container2{
+    text-align: center;
+}
+
+.pt1{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(215 89 53);
+    border: solid rgb(254 242 237);
+    border-radius: 2rem;
+    display: inline-block;
+    clear: both;
+}
+
+.question{
+    font-size: 3.5rem;
+    color: rgb(29 31 58);
+    line-height: 4.5rem;
+    padding-top: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+    width: auto;
+    margin-left: 32rem;
+    margin-right: 31rem;
+}
+
+#Ask{
+    font-family: "Pacifico", cursive;
+    font-size: 3.5rem;
+    color: rgb(29 31 58);
+    font-weight: bold;
+}
+
+.flexcontain{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcontain > div{
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem 3rem 2rem;
+    width: 20rem;
+    margin: 5rem 1.5rem 1.5rem 5rem;
+    color: rgb(137 136 141);
+}
+
+.flexcontain2{
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 1rem 2rem 3rem 2rem;
+    width: 20rem;
+    margin: 5rem 1.5rem 1.5rem 5rem;
+    color: rgb(137 136 141);
+}
+.btn{
+    display: block;
+    color: rgb(198 95 81);
+    text-decoration: none;
+    margin-top: 2rem;
+}
+
+.headerr{
+    margin: 0.8rem 0 0.8rem 0;
+    padding-bottom: 1.2rem;
+    color: rgb(30 31 36);
+    font-size: 1.2rem;
+}
+
+.my-button{
+    float: right;
+    border-radius: 1rem;
+    font-size: 1rem;
+    border:none;
+    color:black;
+    background: none;
+    cursor: pointer;
+}
+
+
+input[type=text], select {
+    width: 45rem;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+}
+
+
+.container{
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 10rem 10rem 10rem 10rem;
+    line-height: 3rem;
+    font-family: "Fenix", serif;
+    border-radius: 3rem;
+}
+
+
+.title{
+    padding-right: 6rem;
+}
+
+.my-btn{
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+   </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div class="container2">
+        <div class="pt1"> Frequently ask question</div>
+    </div>
+    <div id="welcomeDiv" onclick="addDiv('faq1')" class="question" >You ask? we answer</div>
+</div>
+<div>
+    <form>
+        <label class="title">Title:</label><br>
+        <input type="text" id="userInput1" name="Title"  placeholder="Enter Text">
+        <br>
+        <label class="title">Body Text:</label><br>
+        <input type="text" id="userInput2" name="Body Text" placeholder="Write Something...">
+        <br>
+        <label class="title">Button For text:</label><br>
+        <input type="text" id="userInput3" name="Body Text" placeholder="Text">
+    </form>
+    <button class="my-btn" onclick="addInput()"> platypus</button>
+
+	<div  class="flexcontain" id="output"></div>
+
+</div>
+<div class="flexcontain">
+    <div id="faq1">
+        <div onmouseover="this.style.color='red';" 
+		onmouseout="this.style.color = 'black'" class="headerr">
+            How to apply<button onclick="deleteitem('faq1')" 
+			class="my-button demo"> X</button>
+        </div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <div id="faq2">
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color = 'black'" class="headerr">
+            How Much the Plans<button onclick="deleteitem('faq2')" class="my-button"> X</button>
+        </div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <div id="faq3">
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color =
+               'black'" class="headerr">How to Create New Module<button onclick="deleteitem('faq3')" class="my-button"> X</button></div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <div id="faq4">
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color =
+               'black'" class="headerr">How to Add Icons<button onclick="deleteitem('faq4')" class="my-button"> X</button></div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <div id="faq5">
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color =
+               'black'" class="headerr">How to Share <button onclick="deleteitem('faq5')" class="my-button"> X</button></div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <div id="faq6">
+        <div onmouseover="this.style.color='red';" onmouseout="this.style.color =
+               'black'" class="headerr"> Setup Component<button onclick="deleteitem('faq6')" class="my-button"> X</button></div>
+        Pretium ac auctor quis urna orci feugiat. Vulputate tellus velit tellus
+        orci auctor vel nulla facilisi ut. <a href="#" class="btn"> read more</a>
+    </div>
+    <script>
+        function deleteitem(divname){
+            console.log("Deleting item " + divname);
+            let item = document.getElementById(divname);
+            console.log(item.innerHTML);
+            item.remove();
+        }
+
+    </script>
+    <script>
+        function addDiv(){
+            const body = document.body;
+            const div =document.createElement('div');
+            body.append(div);
+        }
+    </script>
+    <script>
+        function addInput() {
+            let input = document.querySelectorAll('#userInput1, #userInput2, #userInput3');
+           
+		   let outputDiv = document.getElementById('output');
+       
+            // Create a new paragraph element
+            let paragraph = document.createElement('div');
+ 
+ 
+            // Get values from each input
+            const ip = [];
+            input.forEach(i => ip.push(i.value)
+			
+			);
+
+            // Create text node with user input
+           
+			let textNode = document.createElement("div");
+			textNode.textContent=(ip[0]);
+			textNode.style.color = 'black';
+			 textNode.addEventListener('mouseout', function() {
+        textNode.style.color = 'black';
+    });
+			 textNode.addEventListener('mouseover', function() {
+        textNode.style.color = 'red';
+    });
+
+ textNode.classList.add("headerr");
+			
+			let textNode1 = document.createElement("div");
+			
+			textNode1.textContent=(ip[1]);
+			
+			 textNode1.style.marginTop ='10px';
+			
+			let textNode2 = document.createElement("a");
+			textNode2.textContent=(ip[2]);
+			 textNode2.classList.add("btn");
+			 textNode2.style.marginTop ='10px';
+           textNode2.setAttribute("href", "#");
+			 
+            // Append text node to paragraph element
+            paragraph.appendChild(textNode);
+            paragraph.appendChild(textNode1);
+			paragraph.appendChild(textNode2);
+            // Append paragraph element to output div
+            outputDiv.appendChild(paragraph);
+            paragraph.classList.add("paragraph");
+
+            // Clear the input field after appending
+            document.getElementById('userInput').value = '';
+			
+        }
+    </script>
+</div>
+</body>
+</html>
