@@ -49,81 +49,56 @@
 
 <script>
 
-let panel = document.getElementsByClassName("panel");
-
-
+let panel = document.querySelectorAll(".panel");
 function myFunction0() {
-if (panel[0].style.display === 'block')
-{
-       panel[1].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-else if (panel[1].style.display === 'block')
-{
-       panel[1].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-	else if (panel[2].style.display === 'block')
-{
-       panel[1].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-	      
-	   else {
-	    panel[0].style.display = 'block';
-		
-	   }
-	   return myFunction0();
+
+     	    if (panel[0].style.display === '') {
+    panel[0].style.display = "block";
+	panel[1].style.display = "none";
+	panel[2].style.display = "none";
+  } else {
+    panel[0].style.display = "none";
+  }
+	     return clearfunction();  
+
+	 
 }
+
+
 function myFunction1() {
 
-if (panel[1].style.display === 'block')
-{
-
-       panel[0].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-else if (panel[0].style.display === 'block')
-{
-       panel[0].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-	else if (panel[2].style.display === 'block')
-{
-       panel[0].style.display = 'none';
-	   panel[2].style.display = 'none';
-	   }
-	      
-	   else {
-	    panel[1].style.display = 'block';
-		
-	   }
-	   return myFunction1();
+      if (panel[1].style.display === '') {
+    panel[1].style.display = "block";
+	panel[0].style.display = "none";
+	panel[2].style.display = "none";
+  } else {
+    panel[1].style.display = "none";
+  }
+	 return clearfunction();
 }
+
 function myFunction2() {
-if (panel[2].style.display === 'block')
-{
-       panel[0].style.display = 'none';
-	   panel[1].style.display = 'none';
-	   }
-else if (panel[1].style.display === 'block')
-{
-       panel[0].style.display = 'none';
-	   panel[1].style.display = 'none';
-	   }
-	else if (panel[0].style.display === 'block')
-{
-       panel[0].style.display = 'none';
-	   panel[1].style.display = 'none';
-	   }
-	      
-	   else {
-	    panel[2].style.display = 'block';
-		
-	   }
-	   return myFunction2();
-}
 
+        if (panel[2].style.display === '') {
+    panel[2].style.display = "block";
+	panel[0].style.display = "none";
+	panel[1].style.display = "none";
+  } else {
+    panel[2].style.display = "none";
+  }
+return clearfunction();
+}
+function clearfunction(){
+if (panel[0].style.display === 'none') {
+    panel[0].style.display = '';
+}
+if (panel[1].style.display === 'none') {
+    panel[1].style.display = '';
+}
+if (panel[2].style.display === 'none') {
+    panel[2].style.display = '';
+}
+};
 
 
 
