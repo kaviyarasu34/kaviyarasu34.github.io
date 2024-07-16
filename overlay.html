@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+   <style>
+     body {
+  margin:0;
+  font-family: 'poppins';
+  background: #f5f5f5f5;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  gap: 30px;
+
+}
+
+.widget {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+a {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px;
+}
+
+header {
+  padding: 2px 40px;
+  background: #fff;
+  align-items: center;
+  background-color: #04e7c1;
+
+}
+
+header h1 {
+  grid-column: span 6;
+}
+
+header nav {
+  grid-column: 7 / span 6;
+  justify-self: end;
+}
+
+header nav a {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+main img {
+  grid-column: span 6;
+  width: 100%;
+  border-radius: 6px;
+}
+
+
+main .weclome {
+  grid-column:  8 / span 3;
+  
+}
+
+main > h2 {
+  grid-column: span 12;
+  text-align: center;
+  font-size: 1.5em;
+  padding-top: 0px;
+  background-color: #04e7c1;
+
+}
+
+.wrapper {
+  grid-column: span 4;
+  padding: 2px 2px ;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+  background-color: #04e7c1;
+  width: 400px;
+  height: 400px;
+ 
+}
+
+
+.co{
+  position: relative;
+  width: 100%;
+ 
+}
+
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  main img {
+    grid-column: 2 / span 10;
+  }
+  main .weclome {
+    grid-column: 3 / span 8;
+    text-align: center;
+  }
+  main .card {
+    grid-column: 3 / span 8;
+
+  }
+}
+.co:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute; 
+
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 60%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+     </style>
+  </head>
+  <body>
+
+
+
+<header class="grid">
+<h1>Evergreen - Best Deals For Anything Pc</h1>
+<nav>
+  <a href="/">Home</a>
+  <a href="/">About</a>
+  <a href="/">Contact</a>
+  
+  
+
+</nav>
+</header>
+
+<div class="widget">
+  <a href="/">Gaming Pc's</a>
+  <a href="/">Budget Pc's</a>
+  <a href="/">Specials</a>
+  <a href="/">Upgrade Kits</a>
+</div>
+
+<main class="grid">
+  <img src="">
+  <div class="welcome">
+    <h2></h2>
+    <p>
+
+    </p>
+  </div>
+  <h2>Services</h2>
+  <div class="wrapper">
+  <div class="co">
+    <img class="image" src="https://techcrunch.com/wp-content/uploads/2023/08/bluesky-006.jpg">
+    <div class="overlay">is it time to revitalise your gaming rig? Get the best deals and start Dominating</div>
+       <div class="content">
+      <h5>Upgrade Kits</h5>
+      <h5>Specials</h5>
+      <h5>Components</h5>
+     </div> </div>
+     <div class="co">
+    <img class="image" src="https://techcrunch.com/wp-content/uploads/2023/08/bluesky-006.jpg">
+    <div class="overlay">is it time to revitalise your gaming rig? Get the best deals and start Dominating</div>
+       <div class="content">
+      <h5>Upgrade Kits</h5>
+      <h5>Specials</h5>
+      <h5>Components</h5>
+      </div> </div>
+     <div class="co">
+    <img class="image" src="https://techcrunch.com/wp-content/uploads/2023/08/bluesky-006.jpg">
+    <div class="overlay">is it time to revitalise your gaming rig? Get the best deals and start Dominating</div>
+   
+    <div class="content">
+      <h5>Upgrade Kits</h5>
+      <h5>Specials</h5>
+      <h5>Components</h5>
+
+    
+  </div>
+</div>
+   
+</div>
+  
+</main>
+</body>
+</html>
+
+
+  
